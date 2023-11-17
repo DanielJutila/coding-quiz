@@ -1,0 +1,10 @@
+body{
+    width: 100%;
+    text-align: center;
+}
+.timer{
+    font-size: 40px;
+    text-align: right;
+    font-weight: bold;
+    margin-right: 40px;
+}
