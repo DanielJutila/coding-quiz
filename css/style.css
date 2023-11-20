@@ -8,3 +8,6 @@ body{
     font-weight: bold;
     margin-right: 40px;
 }
+.q1, .q2, .q3, .q4, .q5, .q6{
+    display: none;
+}
