@@ -45,7 +45,7 @@ function setTime() {
         timeInterval = setInterval(function () {
             secondsLeft--;
             timer.textContent = secondsLeft;
-            if (secondsLeft == 0) {
+            if (secondsLeft <= 0) {
                 clearInterval(timeInterval);
                 endGame();
             }
@@ -61,7 +61,8 @@ function handleAnswer(isCorrect) {
     } else {
         secondsLeft -= 10;
     }
-    if (questionOrder < qArray.length) {
+
+    if (questionOrder < qArray.length && secondsLeft > 0) {
         qArray[questionOrder].setAttribute('style', 'display: block;');
     } else {
         endGame();
@@ -73,6 +74,7 @@ var submitScore = document.querySelector('#submit');
 
 //end game function
 function endGame() {
+    qArray[questionOrder].setAttribute('style', 'display:none;')
     clearInterval(timeInterval);
     timer.setAttribute('style', 'display inline');
     nameScore.setAttribute('style', 'display: block;');
