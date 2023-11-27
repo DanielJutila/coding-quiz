@@ -20,7 +20,6 @@ var questionOrder = 0;
 
 //starts game
 startGame.addEventListener('click', function () {
-    console.log('start game pressed');
     secondsLeft = 30;
     clearInterval(timeInterval);
     setTime();
@@ -74,11 +73,11 @@ var submitScore = document.querySelector('#submit');
 
 //end game function
 function endGame() {
-    qArray[questionOrder].setAttribute('style', 'display:none;')
+    console.log("Do you make it here to EndGame");
     clearInterval(timeInterval);
     timer.setAttribute('style', 'display inline');
     nameScore.setAttribute('style', 'display: block;');
-    timer.textContent = secondsLeft;
+    timer.textContent = 0;
 };
 
 function highscore(event){
